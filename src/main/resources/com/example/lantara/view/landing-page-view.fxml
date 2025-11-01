@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lantara.controller.LandingPageController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="80.0" spacing="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@assets/logo.png" /></image>
+            </ImageView>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" styleClass="menu-button" text="Home" />
+            <Button mnemonicParsing="false" styleClass="menu-button" text="Tentang" />
+            <Button mnemonicParsing="false" styleClass="menu-button" text="Kontak" />
+            <Button fx:id="loginButton" onAction="#handleLoginButton" styleClass="main-login-button" text="Log In" />
+         </children>
+      </HBox>
+      
+      <HBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" maxWidth="500.0" spacing="15.0">
+               <children>
+                  <Label styleClass="hero-title" text="Peminjaman Mobil &amp; Truk Karyawan" wrapText="true" />
+                  <Label styleClass="hero-subtitle" text="Platform internal untuk mempermudah pengelolaan kendaraan dinas." wrapText="true" />
+               </children>
+            </VBox>
+            
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="300.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                     <image>
+                        <Image url="@assets/car.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="350.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0">
+                     <image>
+                        <Image url="@assets/truck.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

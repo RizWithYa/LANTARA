@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lantara.controller.EditVehicleController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Form Edit Data Kendaraan">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Nomor Polisi" GridPane.rowIndex="0" />
+        <TextField fx:id="nopolField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        
+        <Label text="Merek" GridPane.rowIndex="1" />
+        <TextField fx:id="merekField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        
+        <Label text="Model" GridPane.rowIndex="2" />
+        <TextField fx:id="modelField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        
+        <Label text="Tahun" GridPane.rowIndex="3" />
+        <TextField fx:id="tahunField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        
+        <Label text="Status" GridPane.rowIndex="4" />
+        <ChoiceBox fx:id="statusChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="150.0"/>
+        
+    </GridPane>
+    
+    <Label fx:id="errorLabel" textFill="RED" />
+    
+    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <Button onAction="#handleSaveButton" text="Simpan Perubahan" />
+        <Button onAction="#handleCancelButton" text="Batal" />
+    </HBox>
+</VBox>

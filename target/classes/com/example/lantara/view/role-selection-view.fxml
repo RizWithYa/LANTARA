@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lantara.controller.RoleSelectionController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox alignment="CENTER" maxWidth="450.0" spacing="20.0" styleClass="login-panel">
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="20.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Hyperlink onAction="#handleBackButton" styleClass="back-link" text="« Kembali ke Landing Page" />
+                    </children>
+                </HBox>
+
+                <Label styleClass="login-title" text="Pilih Peran Anda">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="managerButton" onAction="#handleManagerButton" prefHeight="50.0" styleClass="main-login-button" text="Saya Manajer" />
+                <Button fx:id="staffButton" onAction="#handleStaffButton" prefHeight="50.0" styleClass="main-login-button" text="Saya Pekerja" />
+            </children>
+        </VBox>
+    </children>
+</GridPane>
